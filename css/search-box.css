@@ -1,0 +1,80 @@
+.search-box{
+    position: absolute;
+    margin-top: 80vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.search-input{
+    width: 44px;
+    height: 44px;
+    background: none;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-sizing: border-box;
+    outline: none;
+    transition: width 0.4s ease-in-out,
+                border-radius 0.6s ease-in-out,
+                padding 0.2s;
+    transition-delay: 0.1s;
+
+    color: white;
+    font-size: 17px;
+}
+/* 设置placeholder颜色*/
+.search-input::-webkit-input-placeholder {
+    color: rgb(175, 171, 167);
+}
+.search-input:-moz-placeholder {
+    color: rgb(175, 171, 167);
+}
+.search-input:-ms-input-placeholder {
+    color: rgb(175, 171, 167);
+}
+
+.inclicked{
+    width: 430px;/*搜索框长度*/
+    border-radius: 0.5rem;
+    padding: 0 15px;
+    padding-right: 40px;
+}
+.btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btn::before{
+    content: "";
+    width: 4px;
+    height: 25px;
+    background: white;
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: -16px;
+    right: -6px;
+    transition: 0.3s;
+}
+
+.close::before, .close::after{
+    content: "";
+    width: 3px;
+    height: 32px;
+    background: white;
+    position: absolute;
+    bottom: 3px;/*搜索框关闭按钮的位置*/
+    right: 25px;
+}
+.close::before{
+    transform: rotate(-45deg);
+}
+.close::after{
+    transform: rotate(45deg);
+}
