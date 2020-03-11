@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inconsolata', 'Franklin Gothic Medium', 'Arial Narrow Bold';
+}
+*::selection{
+    color: #11b8be;
+}
+
+.bg-photo{
+    background: url("../img/bg.jpg") no-repeat;
+    background-color: #11b8be;
+    /*vh是相对与视口高度，100vh为100%视口高度，实现整屏*/
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* 背景图片遮罩*/
+.bg-photo::before {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.45);
+    transition: all .5s;
+}
+
+.self-intro{
+    display: block;
+    width: 80%;
+    height: 40%;
+    color: white;
+    z-index: 3;
+
+    /*居中*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 23vh;
+    text-align:center;
+}
+
+.my-photo{
+    width: 175px;/*照片大小*/
+    border-radius: 50%;
+}
+
+.self-intro h1{
+    font-family: Pacifico;
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+
+    margin-top: 0.8rem;
+}
+
+/* Typist 文本输入效果*/
+@keyframes blink {
+    0% {
+      opacity: 1.0; }
+    50% {
+      opacity: 0.0; }
+    100% {
+      opacity: 1.0; } }
+@-webkit-keyframes blink {
+0% {
+    opacity: 1.0; }
+50% {
+    opacity: 0.0; }
+100% {
+    opacity: 1.0; } }
+.typist .selectedText {
+display: none; }
+.typist:after {
+position: relative;
+top: 7px;
+display: inline-block;
+height: 30px;
+margin-left: 5px;
+content: " ";
+-webkit-animation: blink .5s step-end infinite alternate;
+animation: blink .5s step-end infinite alternate;
+border-right: 2px solid; }
+
+.intro-text{
+    margin-top: 15px;
+    font-size: 22px;
+    text-size-adjust:100%;
+    font-weight: bold;
+    word-spacing: 1px;
+}
+
+
+.section1{
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 100vh;
+    background-color: #8fcfeb;
+    transition: all .5s;
+    text-align: center;
+}
