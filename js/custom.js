@@ -1,3 +1,5 @@
+//alert("注意：\n1. 由于网页响应式设计的问题，推荐使用大屏设备（PC/iPad）打开！\n2. 第一次加载会比较缓慢，之后会有较大改善。\n---Best Regards From ZJM");
+
 // init typist
 new Typist(document.querySelector(".typist"), {
     letterInterval: 60,
@@ -38,7 +40,7 @@ $('.search-input').keydown(function(e){
         else if(/^bili%2F(%20)*/i.test(encoded)){
             url = encoded.replace(/^bili%2F(%20)*/i, 'https://search.bilibili.com/all?keyword=');//bilibili
         }
-        else if(/^github%2F(%20)*/i.test(encoded)){
+        else if(/^git%2F(%20)*/i.test(encoded)){
             url = encoded.replace(/^github%2F(%20)*/i, 'https://github.com/search?utf8=%E2%9C%93&q=');//github
         }
         /*translate Usage: transl/content */
@@ -59,7 +61,7 @@ $('.search-input').keydown(function(e){
         else if(/^%3E(%20)*leetcode/i.test(encoded)){
             url = 'https://leetcode-cn.com/problemset/all/';//leetcode
         }
-        else if(/^%3E(%20)*github/i.test(encoded)){
+        else if(/^%3E(%20)*git/i.test(encoded)){
             url = 'https://github.com/';//github
         }
         window.open(url);
@@ -68,6 +70,61 @@ $('.search-input').keydown(function(e){
         */
     }
 })
+
+// open QQ
+function openQQ() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod", "pad", "pod", "ios", "Mobile", "BlackBerry",
+    "IEMobile", "phone", "BlackBerry", "IEMobile", "MQQBrowser", "JUC", "Fennec", "wOSBrowser", "BrowserNG", "WebOS", "Symbian", "Windows Phone"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    var a = document.getElementById('qq');
+    if (flag == true){
+        a.href = "http://wpa.qq.com/msgrd?v=3&uin=2427394482&site=qq&menu=yes"
+    }else{
+        a.href = "mqqwpa://im/chat?chat_type=wpa&uin=2427394482&version=1&src_type=web&web_src=githubzjm.github.io";
+    }
+}
+
+// scroll-to-top button
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 750) {
+        $('.scroll-top').addClass('scroll-active');
+    } else {
+        $('.scroll-top').removeClass('scroll-active');
+    }
+    return false;
+});
+$('.scroll-top').click(function () {
+    $('html, body').stop().animate({
+        scrollTop: 0
+    }, 550);
+});
+$('.scroll-top').click(function () {
+    $('html, body').stop().animate({
+        scrollTop: 0
+    }, 550);
+});
+
+// active progress bar when reach that page at the first time,
+// and make that change the progress with just modifying the div's text be possible
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 500) {
+        // get every single element and add animation class to them
+        $('.percent').each(function(){
+            var num = $(this).text().replace("%", "");
+            $(this).parent('li').addClass('p'+num);
+        })
+    } 
+    return false;
+});
 
 // for fun
 console.log([
@@ -84,7 +141,4 @@ console.log([
     '  /    /__/____J__M__',
     ' /__________________/|',
     ' |__________________|/'
-
-
-
 ].join('\n'));
