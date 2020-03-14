@@ -3,17 +3,18 @@
     left: -230px;
     width: 230px;
     height: 100%;
-    /*background: #af4c45;*/
-    background: #cc4b4b;
+    background: #cc4b4b;/*#cc4b4b#cc694b*/
     transition: all .5s ease;
     z-index: 3;
+    font-family: 'Inconsolata';
 }
+
 .sidebar header{
     font-size: 25px;
     font-weight: bolder;
     color: white;
     text-align: center;
-    line-height: 70px;
+    line-height: 10vh;
     background: #066858;
     user-select: none;
 }
@@ -21,7 +22,7 @@
     display: block;
     height: 100%;
     width: 100%;
-    line-height: 65px;
+    line-height: 8.5vh;
     font-size: 20px;
     color: white;
     padding-left: 40px;
@@ -30,14 +31,14 @@
     border-bottom: 1px solid black;
     transition: .4s;
 }
-
-ul li:hover a{
+.sidebar ul li:hover a{
     padding-left: 50px;
 }
-
 .sidebar ul a i{
     margin-right: 16px;
 }
+
+/* navbar??*/
 #check{
     display: none;
 }
@@ -45,20 +46,19 @@ label #btn, label #cancel{
     position: fixed;
     cursor: pointer;
     border-radius: 3px;
-    z-index: 3;
+    z-index: 99;
 }
 label #btn{
-    left: 20px;
-    top: 20px;
+    left: 11px;
+    top: 11px;
     font-size: 35px;
     color: white;
     padding: 6px 12px;
     transition: all .5s;
 }
-
 label #cancel{
     left: -100px;
-    top: 18px;
+    top: 11px;
     font-size: 40px;
     color: white;
     padding: 4px 9px;
@@ -77,16 +77,4 @@ label #cancel{
 }
 #check:checked ~ section{
     margin-left: 230px;
-}
-
-.copyright{
-    color: white;
-    font-size: 15px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin-top: 93vh;
-    text-align:center;
 }
