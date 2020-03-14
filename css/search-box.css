@@ -33,12 +33,15 @@
     color: rgb(175, 171, 167);
 }
 
+/* 添加这个类打开搜索框*/
 .inclicked{
     width: 430px;/*搜索框长度*/
     border-radius: 0.5rem;
     padding: 0 15px;
     padding-right: 40px;
 }
+
+/* 打开按钮*/
 .btn{
     position: absolute;
     width: 40px;
@@ -63,6 +66,7 @@
     transition: 0.3s;
 }
 
+/* 关闭按钮*/
 .close::before, .close::after{
     content: "";
     width: 3px;
