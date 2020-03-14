@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- CSS写的烂，轻喷QAQ-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keywords" content="zjm, personal page, 赵家铭, 个人主页" />
+    <meta name="description" content="赵家铭的个人主页" />
+    <title>ZJM - Personal Page</title>
+    <link rel="icon" href="./img/logo.ico">	
+
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/font/fonts.css">
+    <link rel="stylesheet" href="./css/search-box.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/progressbar.css">
+    <link rel="stylesheet" href="./css/fa/css/all.min.css">
+</head>
+<body>
+    <!-- navbar-->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>My Zone</header>
+        <ul>
+            <li><a href="#"><i class="fa fa-calendar-check"></i>Calendar</a></li>
+            <li><a href="#"><i class="fas fa-map-marked-alt"></i>Location</a></li>
+            <li><a href="#"><i class="fa fa-edit"></i>Blog</a></li>
+            <li><a href="#"><i class="fa fa-chart-line"></i>Data Analyse</a></li>
+            <li><a href="#"><i class="fa fa-database"></i>Database</a></li>
+            <li><a href="#"><i class="fa fa-ghost"></i>Apps</a></li>
+            <li><a href="#"><i class="fa fa-sliders-h"></i>Settings</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i>Help</a></li>
+        </ul>
+    </div>
+    
+    <!-- main-->
+    <section class="bg-photo">
+        <div class="self-intro">
+            <a href="#" id="qq" onclick="openQQ()" target="_blank"><div class="my-photo-cover"><i class="fab fa-qq"></i><br>CONTACT ME</div></a>
+            <img src="./img/my-photo.jpg" alt="ZJM" class="my-photo">
+            <h1>Hi, I'm Zhao.</h1>
+            <p class="intro-text">
+                A Noob
+                <span class="typist" data-typist="Blogger, Web Amateur, ML Beginner">Software Engineer</span>
+            </p>
+        </div>
+
+        <div class="search-box">
+                <input type="text" class="search-input" placeholder="">
+                <button class="btn" type="button"></button>
+        </div>
+    </section>
+    
+    <section class="about-section">
+        <h2 class="title">
+            About Me
+        </h2>
+        <div class="thin-strip"></div>
+
+        <ul class="skills skills-left">
+            <h3>Development Skills</h3>
+            <li>C<div class="percent">60%</div></li>
+            <li>Python3<div class="percent">70%</div></li>
+            <li>Java<div class="percent">50%</div></li>
+            <li>HTML5 / CSS3 / JS(Jquery)<div class="percent">50%</div></li>
+            <li>Web Spider(static page)<div class="percent">65%</div></li>
+            <li>ML<div class="percent">30%</div></li>
+        </ul>
+        <ul class="skills skills-right">
+            <h3>Tools</h3>
+            <li>PhotoShop<div class="percent">60%</div></li>
+            <li>Numpy / Pandas<div class="percent">50%</div></li>
+            <li>Requests / Scrapy<div class="percent">40%</div></li>
+            <li>Pytorch<div class="percent">10%</div></li>
+            <li>Postgre<div class="percent">0%</div></li>
+        </ul>
+
+        <div class="contact">
+            <h2 class="name">赵家铭 Zhao Jiaming</h2>
+            <div class="thin-strip"></div>
+            <span>Message Board</span>
+            <p>During COVID-19, I have nothing to do but trying to satisfy my curiosity about Web. 
+                At beginning, I create two versions of personalized website modified from templates, but I get no sense of fulfillment, 
+                so I attend some online courses in the meantime, and finally I master some web knowledge and code this website from zero.
+            </p>
+            <p>More functions are coming soon!</p>
+            <ul>
+                <li><i class="fa fa-mobile-alt"></i> +86 13197892186</li>
+                <li><i class="fa fa-envelope"></i> foxzjm@foxmail.com</li>
+                <li><i class="fa fa-graduation-cap"></i> UESTC, Chengdu, CN</li>
+            </ul>
+        </div>
+
+        <span class="copyright">© 2020 Zhao Jiaming<br>This Website is For Learning and Communication Purposes Only</span>
+    </section>
+    <div class="scroll-top"><a href="#"><i class="fa fa-chevron-circle-up"></i></a></div>
+
+    <!-- js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/Typist/1.2/typist.min.js"></script>
+    <!-- custom js -->
+    <script src="./js/custom.js"></script>
+</body>
+</html>
