@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: 'Inconsolata', 'Franklin Gothic Medium', 'Arial Narrow Bold';
+    color: white;
 }
 *::selection{
     color: #11b8be;
@@ -17,14 +17,12 @@
     background-size: cover;
     background-position: center;
     transition: all .5s;
-
     position: absolute;
     z-index: 1;
     left: 0;
     right: 0;
     text-align: center;
 }
-
 /* 背景图片遮罩*/
 .bg-photo::before {
     position: absolute;
@@ -36,16 +34,14 @@
     top: 0;
     content: "";
     background-color: rgba(0, 0, 0, 0.45);
-    transition: all .5s;
 }
 
 .self-intro{
     display: block;
-    width: 80%;
+    width: 40%;
     height: 40%;
     color: white;
     z-index: 3;
-
     /*居中*/
     position: absolute;
     margin: auto;
@@ -56,10 +52,45 @@
     margin-top: 23vh;
     text-align:center;
 }
-
 .my-photo{
     width: 175px;/*照片大小*/
     border-radius: 50%;
+}
+
+/* 覆盖在照片上的透明层，用于提供qq入口，注意该层与其中的i标签的transition属性要统一*/
+.my-photo-cover{
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent;
+    transition: all 0.6s 0.1s;
+    font-family: 'Inconsolata';
+    color: transparent;
+    font-size: 30px;
+    line-height: 42px;
+    user-select: none;
+}
+.my-photo-cover i{
+    color: transparent;
+    font-size: 30px;
+    margin-top: 23%;
+    user-select: none;
+    transition: all 0.6s 0.1s;
+}
+.my-photo-cover:hover{
+    background-color: #bb5851;
+    color: white;
+    opacity: 0.75;
+    transition: all 0.6s 0.2s;
+}
+.my-photo-cover:hover i{
+    color: white;
+    transition: all 0.6s 0.2s;
 }
 
 .self-intro h1{
@@ -68,8 +99,14 @@
     color: #ffffff;
     font-size: 2rem;
     text-align: center;
-
     margin-top: 0.8rem;
+}
+.intro-text{
+    font-family: 'Inconsolata';
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    word-spacing: 1px;
 }
 
 /* Typist 文本输入效果*/
@@ -100,24 +137,131 @@ content: " ";
 animation: blink .5s step-end infinite alternate;
 border-right: 2px solid; }
 
-.intro-text{
-    margin-top: 15px;
-    font-size: 22px;
-    text-size-adjust:100%;
-    font-weight: bold;
-    word-spacing: 1px;
-}
-
-
-.section1{
-    height: 100vh;
+.about-section{
+    height: 185vh;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin-top: 100vh;
-    background-color: #8fcfeb;
+    background-color: #af3f3b;/*#393532#bb5851#ca645d#5dca8a#cc4b4b#b84743*/
     transition: all .5s;
     text-align: center;
+}
+.title{
+    height: 10vh;
+    line-height: 10vh;/* 文本行高和区域高相同，实现垂直居中*/
+    width: 100%;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    margin-top: 8%;
+    background-color: #af3f3b;/*#393532#bb5851#ca645d#5dca8a#cc4b4b#b84743*/
+    transition: all .5s;
+    text-align: center;
+    z-index: 5;
+    font-size: 40px;
+    font-family: 'Inkfree';
+}
+.title + .thin-strip{
+    height: 0.5vh;
+    width: 15%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    margin-top: 14%;
+    background-color: white;
+    transition: all .5s;
+    text-align: center;
+    z-index: 4;
+    border-radius: 10px;
+}
+
+.contact{
+    height: 40vh;
+    width: 60%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20vh;
+    margin: 0 auto;
+    margin-top: 16%;
+    border-radius: 3%;
+    background-color: #b45750;
+    transition: all .5s;
+    text-align: left;
+}
+.contact .name{
+    margin-left: 1.5vw;
+    margin-top: 3vh;
+    font-family: 'Inconsolata';
+    font-size: 20px;
+}
+.name + .thin-strip{
+    height: 0.3vh;
+    width: 25%;
+    background-color: white;
+    transition: all .5s;
+    text-align: left;
+    z-index: 4;
+    border-radius: 10px;
+    margin-left: 1.5vw;
+    margin-top: 0.5vh;
+}
+.contact span{
+    margin-left: 1.5vw;
+    font-family: 'Inkfree';
+    font-size: 20px;
+    line-height: 5vh;
+}
+.contact p{
+    margin-left: 1.5vw;
+    font-family: 'Inkfree';
+    font-size: 19px;
+    margin-top: 2vh;
+    text-indent: 2em;
+}
+.contact ul{
+    position: absolute;
+    right: 1vw;
+    bottom: 2vh;
+    font-family: 'Inconsolata';
+    line-height: 3vh;
+}
+
+/* scroll-to-top button*/
+.scroll-top{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    right: -5vw;
+    bottom: 5vh;
+    margin: 0 auto;
+    transition: all .3s;
+    text-align: center;
+    z-index: 6;
+    font-size: 35px;
+}
+.scroll-active{
+    right: 1vw;
+    transition: all .3s;
+}
+
+.copyright{
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 2vh;
+    text-align:center;
+    user-select: none;
 }
