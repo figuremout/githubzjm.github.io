@@ -85,9 +85,9 @@ function openQQ() {
     }
     var a = document.getElementById('qq');
     if (flag == true){
-        a.href = "http://wpa.qq.com/msgrd?v=3&uin=2427394482&site=qq&menu=yes"
+        a.href = "http://wpa.qq.com/msgrd?v=3&uin=2427394482&site=qq&menu=yes";
     }else{
-        a.href = "mqqwpa://im/chat?chat_type=wpa&uin=2427394482&version=1&src_type=web&web_src=githubzjm.github.io";
+        a.href = "http://wpa.qq.com/msgrd?v=3&uin=2427394482&site=qq&menu=yes";
     }
 }
 
