@@ -1,0 +1,103 @@
+.skills{
+    width: 30%;
+    text-align: left;
+    margin-top: 15vh;
+}
+.skills h3{
+    font-family: 'Inconsolata';
+}
+
+.skills-left{
+    margin-left: 15%;
+    float: left;
+}
+.skills-right{
+    margin-right: 15%;
+    float: right;
+}
+
+.skills li{
+    list-style: none;
+    font-size: 15px;
+    margin: 48px 0;
+    position: relative;
+}
+.skills li div{
+    width: 3em;
+    height: 1.5em;
+    background-color: #921108;
+    float: right;
+    border-radius: 0.25rem;
+    font-size: small;
+    text-align: center;
+}
+.skills li::before,
+.skills li::after{
+    content: "";
+    display: block;
+    height: 0.8vh;
+    width: 100%;
+    background-color: #be5f58;
+    position: absolute;
+    bottom: -28px;
+    border-radius: 6px;
+}
+
+.skills li::after{
+    /*
+    background-image: linear-gradient(90deg, #ffffff, #87c08c);
+    */
+    background-color: white;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    width: 0;
+}
+
+/* 给相应类绑定动画*/
+.p0::after{animation-name: p0;}
+.p10::after{animation-name: p10;}
+.p20::after{animation-name: p20;}
+.p30::after{animation-name: p30;}
+.p40::after{animation-name: p40;}
+.p50::after{animation-name: p50;}
+.p60::after{animation-name: p60;}
+.p70::after{animation-name: p70;}
+.p80::after{animation-name: p80;}
+.p90::after{animation-name: p90;}
+.p100::after{animation-name: p100;}
+
+.p05::after{animation-name: p05;}
+.p15::after{animation-name: p15;}
+.p25::after{animation-name: p25;}
+.p35::after{animation-name: p35;}
+.p45::after{animation-name: p45;}
+.p55::after{animation-name: p55;}
+.p65::after{animation-name: p65;}
+.p75::after{animation-name: p75;}
+.p85::after{animation-name: p85;}
+.p95::after{animation-name: p95;}
+
+/* 各进度动画*/
+@keyframes p10{from{width: 0;} to{width: 0%;}}
+@keyframes p10{from{width: 0;} to{width: 10%;}}
+@keyframes p20{from{width: 0;} to{width: 20%;}}
+@keyframes p30{from{width: 0;} to{width: 30%;}}
+@keyframes p40{from{width: 0;} to{width: 40%;}}
+@keyframes p50{from{width: 0;} to{width: 50%;}}
+@keyframes p60{from{width: 0;} to{width: 60%;}}
+@keyframes p70{from{width: 0;} to{width: 70%;}}
+@keyframes p80{from{width: 0;} to{width: 80%;}}
+@keyframes p90{from{width: 0;} to{width: 90%;}}
+@keyframes p100{from{width: 0;} to{width: 100%;}}
+
+@keyframes p05{from{width: 0;} to{width: 5%;}}
+@keyframes p15{from{width: 0;} to{width: 15%;}}
+@keyframes p25{from{width: 0;} to{width: 25%;}}
+@keyframes p35{from{width: 0;} to{width: 35%;}}
+@keyframes p45{from{width: 0;} to{width: 45%;}}
+@keyframes p55{from{width: 0;} to{width: 55%;}}
+@keyframes p65{from{width: 0;} to{width: 65%;}}
+@keyframes p75{from{width: 0;} to{width: 75%;}}
+@keyframes p85{from{width: 0;} to{width: 85%;}}
+@keyframes p95{from{width: 0;} to{width: 95%;}}
